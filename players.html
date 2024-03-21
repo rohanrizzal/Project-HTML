@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Players</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide player names initially */
+        .hidden {
+            display: none;
+        }
+
+        /* Style the "Click to view players" text */
+        .view-players {
+            color: blue; /* Blue font */
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="games">
+        <h2>Games</h2>
+        <div class="game" id="cricket">
+            <h3>Cricket</h3>
+            <div class="view-players">Click to view players</div>
+            <div class="players hidden">
+                <h4>Players</h4>
+                <ul>
+                    <li class="player">Sachin Tendulkar</li>
+                    <li class="player">Virat Kohli</li>
+                    <li class="player">David Warner</li>
+                    <li class="player">Steve Smith</li>
+                    <!-- Add more cricket players as needed -->
+                </ul>
+            </div>
+            <!-- Add cricket image -->
+            <img src="cricket.jpeg" alt="Cricket Image" class="game-image">
+        </div>
+        <div class="game" id="football">
+            <h3>Football</h3>
+            <div class="view-players">Click to view players</div>
+            <div class="players hidden">
+                <h4>Players</h4>
+                <ul>
+                    <li class="player">Lionel Messi</li>
+                    <li class="player">Cristiano Ronaldo</li>
+                    <li class="player">Neymar JR</li>
+                    <li class="player">Kylian Mbappe</li>
+                    <!-- Add more football players as needed -->
+                </ul>
+            </div>
+            <!-- Add football image -->
+            <img src="football.jpg" alt="Football Image" class="game-image">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle the visibility of player lists when the "Click to view players" text is clicked
+        document.querySelectorAll('.view-players').forEach(viewPlayers => {
+            viewPlayers.addEventListener('click', () => {
+                const players = viewPlayers.nextElementSibling;
+                players.classList.toggle('hidden');
+            });
+        });
+
+        // JavaScript to toggle the visibility of individual player names when clicked
+        document.querySelectorAll('.player').forEach(player => {
+            player.addEventListener('click', () => {
+                player.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
