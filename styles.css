@@ -1,55 +1,138 @@
-/* styles.css */
-
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul {
+*{
     margin: 0;
     padding: 0;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+nav img{
+    width: 150px;
 }
-
-header h1 {
-    margin: 0;
+.nav-links{
+    flex: 1;
+    text-align: right;
 }
-
-nav ul {
-    list-style-type: none;
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+.nav-links ul li a{
     color: #fff;
     text-decoration: none;
+    font-size: 15px;
 }
-
-section {
-    padding: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
-
-footer {
-    background-color: #333;
+.nav-links ul li:hover::after{
+    width: 100%;    
+}
+.text-box{
+    width: 90%;
     color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
+}
+.text-box h1{
+    font-size: 80px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+font-size: 25px;
+color: #fff;
+}
+.main{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding-top: 35px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1px;
+}
+p{
+    margin-top: 1px;
+    font-size: 20px;
+    font-weight: 300;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
+}
+.para{
+    color: #fff;
+    background: rgba(4,9,30,0.7);
+    border-radius: 12px;
+}
+.team-col{
+margin: auto;   
+flex-basis: 31%;
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+
+}
+.team-col img{
     width: 100%;
+}
+.row{
+    padding: 0%;
+    margin: 5%;
+    display: flex;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div img{
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+table{
+    margin: auto;
+}
+.gallery-col{
+    flex-basis: 31%;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.gallery-col img{
+    width: 100%;
+}
+.gallery{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.foot{
+    text-align: center;
+    margin-top: 0%;
 }
